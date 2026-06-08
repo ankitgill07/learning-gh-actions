@@ -1,0 +1,18 @@
+name: my first workflow
+
+on: workflow_dispatch
+
+jobs:
+  run-one-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List All File
+        run: ls -a
+      - name: Print Working directory
+        run: pwd
+      - name: Create js File
+        run: echo 'console.log("hello world")' > app.js
+      - name: List All File
+        run: ls -a
+      - name: Run Node js File
+        run: node app.js

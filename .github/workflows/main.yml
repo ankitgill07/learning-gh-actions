@@ -1,6 +1,6 @@
 name: my first workflow
 
-on: [push, workflow_dispatch]
+on: push
 
 jobs:
   run-one-command:
@@ -16,3 +16,22 @@ jobs:
         run: ls -a
       - name: Run Node js File
         run: node app.js
+      - name: System name
+        run: uname -a
+      - name: OS verison
+        run: cat /etc/os-release
+      - name: cpu Info
+        run: free -h
+        
+  my-second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print all system info
+        run: | 
+         uname -a
+         cat /etc/os-release
+         lscpu
+         nproc
+         free -h
+
+   

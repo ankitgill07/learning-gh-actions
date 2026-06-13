@@ -13,7 +13,7 @@ jobs:
       - name: List All File
         run: ls -a
       - name: Print workflow files
-        run: cat ./github/workflows/main.yml        
+        run: cat ./.github/workflows/main.yml      
 
 
    

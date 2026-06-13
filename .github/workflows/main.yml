@@ -3,17 +3,29 @@ name: my first workflow
 on: [push , workflow_dispatch]
 
 jobs:
-  run-one-command:
+  # run-one-command:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: List All File
+  #       run: ls -a
+  #     - name: checkout a  Repo
+  #       uses: actions/checkout@v6
+  #     - name: List All File
+  #       run: ls -a
+  #     - name: Print workflow files
+  #       run: cat ./.github/workflows/main.yml
+
+  my-second-job:
     runs-on: ubuntu-latest
     steps:
-      - name: List All File
-        run: ls -a
-      - name: checkout a  Repo
-        uses: actions/checkout@v6
-      - name: List All File
-        run: ls -a
-      - name: Print workflow files
-        run: cat ./.github/workflows/main.yml      
+      - name: node version
+        run: node -v
+      - name: Install node js 
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: node version
+        run: node -v        
 
-
+   
    

@@ -26,6 +26,9 @@ jobs:
           node-version: '25'
       - name: node version
         run: node -v        
-
+      - name: Run custom action
+        uses: ./
+        with:
+          name: Ankit
    
    

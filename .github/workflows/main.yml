@@ -2,10 +2,6 @@ name: my first workflow
 
 on: [push , workflow_dispatch]
 
-env:
-  TEST: "my env variable"
-  SERVER: "My Ubuntu server"
-
 jobs:
   run-one-command:
     runs-on: ubuntu-latest

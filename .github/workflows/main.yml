@@ -12,6 +12,6 @@ jobs:
     steps:
       - run: echo ${{env}}
       - run: echo "${{toJson(github)}}"
-      - run: echo ${{secrets}}
-      - run: echo ${{vars}}
-      - run: echo ${{inputs}}         
+      - run: echo "${{secrets}}"
+      - run: echo "${{vars}}"
+      - run: echo "${{inputs}}"    

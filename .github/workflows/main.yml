@@ -2,8 +2,16 @@ name: my first workflow
 
 on: [push , workflow_dispatch]
 
+env:
+  TEST: "my env variable"
+  SERVER: "My Ubuntu server"
+
 jobs:
   run-one-command:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ 7 > 3 && 2 > 1 }}"
+      - run: echo ${{env}}
+      - run: echo "${{toJson(github)}}"
+      - run: echo ${{secrets}}
+      - run: echo ${{vars}}
+      - run: echo ${{inputs}}         
